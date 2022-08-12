@@ -1,3 +1,3 @@
 # TxtGraber
 Python Script
-/TxtGraber.png
+![TXT Graber image](/TxtGraber.png)
