@@ -3,8 +3,8 @@ from termcolor import colored
 from os import listdir
 from os.path import isfile, join 
 arguments = len(sys.argv)
-if arguments != 3:
-  print (colored("Ops! Wrong Input","red")) 
+if arguments > 3:
+  print (colored("Ops! Too Much inputs","red")) 
   print (colored("==========================================","red"))   
   print (colored("""
     _______  ________   ______           __             
@@ -17,7 +17,7 @@ if arguments != 3:
   print (colored("==========================================","red"))
   print (colored("A small guide for TXT Graber","green"))
   print (colored("python txtgraber.py DirPath OutPutFile.txt","green"))
-elif sys.argv[1] == "help":
+elif arguments == 2 or sys.argv[1] == "help":
   print (colored("""
     _______  ________   ______           __             
    /_  __/ |/ /_  __/  / ____/________ _/ /_  ___  _____
@@ -37,10 +37,14 @@ else:
   files = [join(folder_path, f) for f in listdir(folder_path) if isfile(join(folder_path, f)) and f.endswith(".txt")] 
 
   f = open(outputFile, 'a')   
+  
 
-  for file in files:   
-      line = open(file,"r").readlines()[0] # line will be equal to the second line of the file
-      f.write(line)   
+  for file in files:
+      lines_seen = set() # holds lines already seen
+      lines = open(file,"r").readlines() # line will be equal to the second line of the file
+      for line in lines:
+          if not (line.startswith("#") or line.startswith(" ")):
+              f.write(line)   
   f.close()
   print (colored("""
     _______  ________   ______           __             
