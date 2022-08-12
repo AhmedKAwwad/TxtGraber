@@ -1,5 +1,5 @@
 # TxtGraber
-![TXT Graber image](/TxtGraber1.png)
+![TXT Graber image](banner.png)
 
 TxtGraber is Python Script aim to automate appending wordlists in one UlTIMATE wordlist file.
 So, I made the script to grab all content of all .txt files of certain directories.
