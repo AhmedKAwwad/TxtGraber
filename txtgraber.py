@@ -3,7 +3,7 @@ from termcolor import colored
 from os import listdir
 from os.path import isfile, join 
 arguments = len(sys.argv)
-if arguments != 3 or sys.argv[1] == "help":
+if arguments != 3:
   print (colored("Ops! Wrong Input","red")) 
   print (colored("==========================================","red"))   
   print (colored("""
@@ -17,7 +17,19 @@ if arguments != 3 or sys.argv[1] == "help":
   print (colored("==========================================","red"))
   print (colored("A small guide for TXT Graber","green"))
   print (colored("python txtgraber.py DirPath OutPutFile.txt","green"))
-
+elif sys.argv[1] == "help":
+  print (colored("""
+    _______  ________   ______           __             
+   /_  __/ |/ /_  __/  / ____/________ _/ /_  ___  _____
+    / /  |   / / /    / / __/ ___/ __ `/ __ \/ _ \/ ___/
+   / /  /   | / /    / /_/ / /  / /_/ / /_/ /  __/ /    
+  /_/  /_/|_|/_/     \____/_/   \__,_/_.___/\___/_/     
+                                                        
+  ""","blue"))
+  print (colored("==========================================","yellow"))
+  print (colored("A small guide for TXT Graber","green"))
+  print (colored("python txtgraber.py DirPath OutPutFile.txt","green"))
+  
 else:
   folder_path = sys.argv[1]
   outputFile = sys.argv [2]
