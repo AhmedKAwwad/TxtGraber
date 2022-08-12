@@ -7,8 +7,7 @@ Python Script
    / /  /   | / /    / /_/ / /  / /_/ / /_/ /  __/ /    
   /_/  /_/|_|/_/     \____/_/   \__,_/_.___/\___/_/     
                                                         
-```
 ==========================================
 A small guide for TXT Graber
 python txtgraber.py DirPath OutPutFile.txt
-                                             
+```
