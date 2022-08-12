@@ -6,6 +6,6 @@ So, I made the script to grab all content of all .txt files of certain directori
 
 DirPath is your path to the directory which has the .txt files you want to grab their content.
 
-outputFile.txt is your txt file will contain all the appended content.
+OutPutFile.txt is your txt file will contain all the appended content.
 If outputFile isn't existed already, It will be created by default in the current working directory.
 
